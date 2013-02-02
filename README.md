@@ -13,7 +13,11 @@ When I build the OCMockLib target, the libOCMock.a product remains red-colored. 
 The result is two `libOCMock.a` static library files.
 These can be combined with `lipo`.    $ ls
     Debug-iphoneos/        Debug-iphonesimulator/
+
     $ lipo -create Debug-iphoneos/libOCMock.a Debug-iphonesimulator/libOCMock.a -output libOCMock.a
+    
+    $ lipo -info libOCMock.a 
+    Architectures in the fat file: libOCMock.a are: armv7 armv7s i386 
     
 This library can be added to your project.> Finally and most importantly Xcode needs to tell the compiler to force load the OCMock libraries at compile time, otherwise your tests will crash. Within the Build Settings in your test build target add the following line to the Other Linker Flags entry; -force_load $(SRCROOT)/tests/libraries/libOCMock.a.Ref: http://def.reyssi.net/blog/2012/03/23/using-ocmock-with-xcode4/
 
