@@ -1,9 +1,7 @@
-OCMock
-======
+dz1111-OCMock
+=============
 
-OCMock is an Objective-C implementation of mock objects. Github is used to store and manage the source code. For documentation and support please visit [ocmock.org][1].  
+This is a fork off of erikdoe/ocmock for the purpose of building a combined static library for unit testing, using OCMock, on iOS devices and iOS simulators.
 
-If you are unfamiliar with the concept of mock objects, please visit [mockobjects.com][2]. It has more detail about this approach to testing software.  
+More info on OCMock at [ocmock.org](ocmock.org).
 
-  [1]: http://ocmock.org/
-  [2]: http://www.mockobjects.com/
